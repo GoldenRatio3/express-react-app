@@ -9,7 +9,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/greeting").then((resp) => {
+    fetch("/api/greeting?name=test").then((resp) => {
       if (resp.status !== 200) {
         console.log("Looks like there was a problem." + resp.status);
       }
