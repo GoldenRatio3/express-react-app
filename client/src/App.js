@@ -13,7 +13,7 @@ const styles = {
 class App extends Component {
   constructor() {
     super();
-    this.state = { greeting: "Test Greeting" };
+    this.state = { greeting: "Greetings!" };
   }
 
   componentDidMount() {
