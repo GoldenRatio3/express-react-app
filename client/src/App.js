@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount() {
     fetch("/api/greeting").then((resp) => {
       if (resp.status !== 200) {
-        console.log("Looks like there was a problem." + resp.status);
+        console.log(`Looks like there was a problem. ${resp.status}`);
       }
 
       return resp.json().then((data) => {
@@ -32,7 +32,7 @@ class App extends Component {
     const name = event.target.value;
     fetch("/api/greeting?name=" + name).then((resp) => {
       if (resp.status !== 200) {
-        console.log("Looks like there was a problem." + resp.status);
+        console.log(`Looks like there was a problem. ${resp.status}`);
       }
 
       return resp.json().then((data) => {
